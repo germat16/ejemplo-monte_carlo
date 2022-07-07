@@ -46,8 +46,19 @@
         }
         let cociente = 1/sims
         let result = cociente*sum
+        let resta = 17 - result;
+        let errorAbsoluto = Math.abs(resta)
+        let errorRelativo = (errorAbsoluto/17)*100;
+
            // alert(result)
-        p.textContent = "El resultado de la simulacion luego de "+ sims +" simulaciones es...: " + result;
+        let msg = {
+            message1: "El resultado de la simulacion luego de "+ sims +" simulaciones es...: " 
+            + result,
+            message2: "El porcentaje de error es de " + errorRelativo + "%",
+            message3: "El resultado matemático de la integral, resolviendo la " +
+            "antiderivada de la expresión y luego sustituyendo los valores mediante el el teorema fundamental del cálculo es: " + 17
+        }
+        p.textContent = msg.message1 + '\n' + msg.message2 + '\n' + msg.message3;
         card.appendChild(p)
         sum = 0
         } 
