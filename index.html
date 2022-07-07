@@ -26,6 +26,8 @@
     <script>
         let btn = document.getElementById('btn-enviar')
         var p = document.createElement('p')
+        var p2 = document.createElement('p')
+        var p3 = document.createElement('p')
         var card = document.getElementById('main-card')
         var res  = 0
         var sims = 0
@@ -58,8 +60,17 @@
             message3: "El resultado matemático de la integral, resolviendo la " +
             "antiderivada de la expresión y luego sustituyendo los valores mediante el el teorema fundamental del cálculo es: " + 17
         }
-        p.textContent = msg.message1 + '\n' + msg.message2 + '\n' + msg.message3;
+        p.textContent = msg.message1;
+        p2.textContent = msg.message2;
+        p3.textContent = msg.message3;
+
+        p.setAttribute('class','resultP')
+        p2.setAttribute('class','resultP')
+        p3.setAttribute('class','resultP')
+
         card.appendChild(p)
+        card.appendChild(p2)
+        card.appendChild(p3)
         sum = 0
         } 
     /*    let i = 0
