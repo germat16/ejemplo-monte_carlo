@@ -1,0 +1,50 @@
+* {
+    margin:0;
+    padding: 0;;
+}
+body {
+    background-color: rgb(197, 197, 238);
+}
+nav {
+    background-color: blue;
+    padding: 55px;
+}
+
+.logo-txt {
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+footer{
+    margin-top: 240px;
+    background-color: black;
+    padding:55px;
+}
+footer h3 {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+.main-card{
+    margin-top: 240px;
+    padding:35px;
+    background-color: white;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-title {
+    font-family: cursive;
+    text-align: center;
+    text-decoration: underline;
+
+}
+
+#btn-enviar{
+    padding: 10px;
+    color: white;
+    background-color: blue;
+    border-radius: 15%;
+}

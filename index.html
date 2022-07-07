@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integración por Monte Carlo </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <h2 id="nav-logo"><a href="index.html" class="logo-txt">Segundo Corte</a></h2>
+    </nav>
+
+    <div class="main-card" id="main-card">
+        <h4 class="card-title">Programa para hacer cálculos de una integral por Monte Carlo</h4>
+        <br>
+        <p>Por favor introduzca la cantidad de veces para simular</p>
+        <br> <br>
+        <form action="" id="frm">
+            <label for="linput">N° de simulaciones</label>
+            <input type="number" name="linput" id="linput" min="1" required>
+            <button id="btn-enviar">Enviar</button>
+        </form>
+    </div>
+    <script>
+        let btn = document.getElementById('btn-enviar')
+        var p = document.createElement('p')
+        var card = document.getElementById('main-card')
+        var res  = 0
+        var sims = 0
+
+       
+        btn.onclick = function(e){
+            e.preventDefault();
+            let simsVal = document.getElementById('linput').value;
+           // alert(simsVal)
+            sims = simsVal
+            let i = 0
+        let sum = 0
+        while(i < sims){
+
+            sum += 3*Math.pow((Math.random()*(3-2)+2),2)
+            sum += 2*(Math.random()*(3-2)+2)
+            i++;
+        }
+        let cociente = 1/sims
+        let result = cociente*sum
+           // alert(result)
+        p.textContent = "El resultado de la simulacion luego de "+ sims +" simulaciones es...: " + result;
+        card.appendChild(p)
+        sum = 0
+        } 
+    /*    let i = 0
+        let sum = 0
+        while(i < sims){
+
+            sum += 3*Math.pow((Math.random()*(3-2)+2),2)
+            sum += 2*(Math.random()*(3-2)+2)
+            i++;
+        }
+        let cociente = 1/sims
+        let result = cociente*sum
+           // alert(result)
+        p.textContent = "El resultado de la simulacion es...: " + result;
+        card.appendChild(p)
+        */
+
+    </script>
+    <footer>
+        <h3>Autor: Germán Matheus, Julio del 2022 </h3>
+    </footer>
+</body>
+</html>
